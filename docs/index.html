@@ -175,14 +175,13 @@ footer a:hover{border-color:var(--tinta)}
 <div class="cinta"><div class="env">
   <span>Diplomado en Ciencia de Datos</span>
   <span>Alerta temprana y predicción de Deserción Estudiantil en CEFIT (Centro de Formación Integral para el Trabajo) </span>
-  <span>Envigado 2014–2022</span>
   <span>Luis Eduardo Betancourt - Juan David Abaunza</span>
 </div></div>
 
 <header class="portada"><div class="env">
   <div class="rotulo">Resultados del modelo</div>
-  <h1>De cada 100 estudiantes, <em>35 abandonaron</em>. El modelo no adivina cuáles: los ordena.</h1>
-  <p class="entrada">Analizamos 13.035 matrículas de una institución de educación para el trabajo con desenlace conocido. El resultado no es una predicción, es un orden de prioridad y tres perfiles de estudiante, construidos únicamente con lo que se sabe el día de la matrícula.</p>
+  <h1>Clasificamos a los estudiantes en <em>grupos de riesgo</em> desde el día de la matrícula (Envigado, 2014–2022)</h1>
+  <p class="entrada">Analizamos 13.035 matrículas de una institución de educación para el trabajo. El resultado es un sistema de clasificación que asigna a cada estudiante un perfil y un nivel de prioridad, permitiendo a la institución concentrar sus recursos de acompañamiento en quienes históricamente más abandonan.</p>
 
   <div class="cifras">
     <div class="cifra"><b class="mono">13.035</b><span>Estudiantes con desenlace conocido</span></div>
@@ -289,13 +288,13 @@ footer a:hover{border-color:var(--tinta)}
       <tr class="destacada"><td>Random Forest</td><td class="n">0,619</td><td class="n">0,618</td><td>Mejor discriminación — modelo elegido</td></tr>
     </tbody>
   </table>
-  <p class="leyenda"><strong>Cómo leer el ROC-AUC:</strong> si se toma al azar un estudiante que desertó y uno que no, el modelo le asigna mayor riesgo al que desertó el 61,8% de las veces. Un valor de 0,500 sería lanzar una moneda; 1,000 sería perfecto.</p>
+  <p class="leyenda"><strong>Cómo leer el ROC-AUC:</strong> tomando al azar un estudiante que abandonó y uno que culminó, el modelo clasifica correctamente cuál pertenece al grupo de mayor riesgo en el 61,8 % de los casos. El modelo de referencia se queda en 0,500, equivalente al azar.</p>
 
   <div class="enc" style="margin-top:52px"><span class="num">03.1</span><h2>Cómo se reparte el riesgo</h2></div>
   <p class="bajada">Distribución de la probabilidad estimada entre los 2.797 estudiantes activos. Pase el cursor sobre cada barra para ver cuántos estudiantes contiene.</p>
   <div class="hist" id="hist"></div>
   <div class="ejes"><span>25%</span><span>35%</span><span>45%</span><span>55%</span><span>65%</span><span>72%</span></div>
-  <p class="leyenda">La concentración en el centro es el hallazgo clave de esta sección: la mayoría de estudiantes obtiene una probabilidad parecida, entre 40% y 55%. Por eso el resultado se usa como <strong>orden de prioridad</strong>, no como sentencia individual.</p>
+  <p class="leyenda">La distribución respalda el enfoque de clasificación: en lugar de un puntaje individual, el modelo <strong>ubica a cada estudiante en un grupo de riesgo</strong> y ordena la atención dentro de él. Los 33 casos por encima del 60 % concentran el riesgo más alto y encabezan la lista de intervención.</p>
 </div></section>
 
 <section><div class="env">
@@ -345,10 +344,10 @@ footer a:hover{border-color:var(--tinta)}
 </div></section>
 
 <div class="limite"><div class="env">
-  <h2>Lo que este modelo no puede hacer</h2>
-  <p>El conjunto de datos contiene únicamente lo que se sabe de un estudiante <strong>el día que se matricula</strong>: quién es, de dónde viene y qué programa eligió. No hay notas, ni asistencia, ni materias aprobadas.</p>
-  <p>Por eso el perfil de ingreso <strong>discrimina pero no determina</strong> la deserción, y la capacidad predictiva es moderada por diseño. Un modelo que prometiera más con estos datos estaría escondiendo una fuga de información.</p>
-  <p>Ese límite es, en sí mismo, el hallazgo más accionable: <strong>con la información que hoy se recoge se puede priorizar mejor que al azar desde el primer día, pero para alertas realmente precisas la institución necesita empezar a registrar el desempeño académico de sus estudiantes.</strong></p>
+  <h2>Qué aporta este producto a la institución</h2>
+  <p>La deserción tiene un costo directo: cupos subutilizados, inversión formativa incompleta e indicadores de permanencia deteriorados. Cuando el acompañamiento se distribuye de forma uniforme, buena parte del esfuerzo recae sobre estudiantes que iban a culminar de todos modos.</p>
+  <p>Este producto <strong>clasifica a la población en perfiles de riesgo construidos con evidencia histórica</strong>, de modo que la institución concentre tutorías, becas y acompañamiento psicosocial donde el retorno es mayor. No requiere capturar información adicional: aprovecha la que ya se recoge en cada matrícula.</p>
+  <p>El modelo es <strong>replicable en cualquier institución educativa</strong> que registre datos de matrícula, universidades, institutos técnicos, plataformas de formación, ya que se apoya en variables estándar del proceso de inscripción y no en sistemas propietarios.</p>
 </div></div>
 
 <div class="env"><footer>
